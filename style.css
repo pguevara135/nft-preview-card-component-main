@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-main-BG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--soft-blue);
+}
+
+.container {
+    width: 350px;
+    background-color: var(--very-dark-blue-card-BG);
+    box-shadow: 0 0 5px 5px hsla(215, 51%, 16%, 0.521);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.img-top {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-top img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.img-overlay {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(178, 100%, 50%, 0.493);
+    display: none;
+}
+
+.img-top:hover .img-overlay {
+    display: block;
+    cursor: pointer;
+}
+
+.img-overlay img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main {
+    font-size: 18px;
+}
+
+.tittle {
+    margin: 1.5rem 0;
+}
+
+.tittle a {
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a {
+    color: var(--white);
+}
+
+a:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.tittle p {
+    margin: 1.5rem 0;
+    line-height: 1.5rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.eth {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--cyan);
+}
+
+.days {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+hr {
+    border-color: var(--very-dark-blue-line);
+    margin: 1.3rem 0;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 14px;
+}
+
+.author img {
+    width: 32px;
+    height: 32px;
+}
